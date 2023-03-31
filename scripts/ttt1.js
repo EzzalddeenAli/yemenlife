@@ -44,16 +44,7 @@ function calll2() {
         content: _t('app.public.tour.welcome.machines.content'),
         placement: 'right'
       });
-      if ($scope.$root.modules.spaces) {
-        uitour.createStep({
-          selector: '.nav-primary li.reserve-space-link',
-          stepId: 'spaces',
-          order: 4,
-          title: _t('app.public.tour.welcome.spaces.title'),
-          content: _t('app.public.tour.welcome.spaces.content'),
-          placement: 'right'
-        });
-      }
+    
       uitour.createStep({
         selector: '.nav-primary li.reserve-training-link',
         stepId: 'trainings',
@@ -86,14 +77,7 @@ function calll2() {
         content: _t('app.public.tour.welcome.plans.content'),
         placement: 'right'
       });
-      uitour.createStep({
-        selector: '.nav-primary .admin-section',
-        stepId: 'admin',
-        order: 9,
-        title: _t('app.public.tour.welcome.admin.title', { ROLE: _t(`app.public.common.${$scope.currentUser.role}`) }),
-        content: _t('app.public.tour.welcome.admin.content'),
-        placement: 'right'
-      });
+
       uitour.createStep({
         selector: '.navbar.header li.about-page-link',
         stepId: 'about',
@@ -120,56 +104,7 @@ function calll2() {
         placement: 'bottom',
         popupClass: 'shift-left-80'
       });
-      if ($scope.status.news && settingsPromise.home_blogpost) {
-        uitour.createStep({
-          selector: 'news',
-          stepId: 'news',
-          order: 13,
-          title: _t('app.public.tour.welcome.news.title'),
-          content: _t('app.public.tour.welcome.news.content'),
-          placement: 'bottom'
-        });
-      }
-      if ($scope.status.projects) {
-        uitour.createStep({
-          selector: 'projects',
-          stepId: 'last_projects',
-          order: 14,
-          title: _t('app.public.tour.welcome.last_projects.title'),
-          content: _t('app.public.tour.welcome.last_projects.content'),
-          placement: 'right'
-        });
-      }
-      if ($scope.status.twitter) {
-        uitour.createStep({
-          selector: 'twitter',
-          stepId: 'last_tweet',
-          order: 15,
-          title: _t('app.public.tour.welcome.last_tweet.title'),
-          content: _t('app.public.tour.welcome.last_tweet.content'),
-          placement: 'left'
-        });
-      }
-      if ($scope.status.members) {
-        uitour.createStep({
-          selector: 'members',
-          stepId: 'last_members',
-          order: 16,
-          title: _t('app.public.tour.welcome.last_members.title'),
-          content: _t('app.public.tour.welcome.last_members.content'),
-          placement: 'left'
-        });
-      }
-      if ($scope.status.events) {
-        uitour.createStep({
-          selector: 'events',
-          stepId: 'next_events',
-          order: 17,
-          title: _t('app.public.tour.welcome.next_events.title'),
-          content: _t('app.public.tour.welcome.next_events.content'),
-          placement: 'top'
-        });
-      }
+    
       uitour.createStep({
         selector: 'body',
         stepId: 'customize',
