@@ -6,7 +6,7 @@ function calll() {
     alert("ggg")
 }
 function calll2() {
-
+    var _t=injector().get("_t")
     var uiTourService=injector().get("uiTourService")
     console.log(uiTourService)
     const uitour = uiTourService.getTourByName('welcome');
